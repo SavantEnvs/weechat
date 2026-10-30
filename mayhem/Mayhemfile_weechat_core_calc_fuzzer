@@ -1,0 +1,10 @@
+project: savantenvs/weechat
+target: weechat_core_calc_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/weechat_core_calc_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/weechat_core_calc_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/weechat_core_calc_fuzzer/weechat_core_calc_fuzzer.dict
